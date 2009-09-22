@@ -5562,3 +5562,194 @@ Rendering template within layouts/application
 Rendering apps/show
 Rendered developers/_developer_bar (3.1ms)
 Completed in 37ms (View: 17, DB: 2) | 200 OK [http://localhost/apps/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AppsController#edit (for 127.0.0.1 at 2009-09-22 05:47:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDeveloper Load (0.4ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+  [4;36;1mApp Load (0.3ms)[0m   [0;1mSELECT `apps`.* FROM `apps` INNER JOIN `app_developers` ON `apps`.id = `app_developers`.app_id WHERE (`apps`.`id` = '2') AND ((`app_developers`.developer_id = 1)) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering apps/edit
+Rendered developers/_developer_bar (3.1ms)
+Completed in 46ms (View: 25, DB: 1) | 200 OK [http://localhost/apps/2/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AppsController#show (for 127.0.0.1 at 2009-09-22 05:47:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDeveloper Load (0.4ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+  [4;36;1mApp Load (0.3ms)[0m   [0;1mSELECT `apps`.* FROM `apps` INNER JOIN `app_developers` ON `apps`.id = `app_developers`.app_id WHERE (`apps`.`id` = '2') AND ((`app_developers`.developer_id = 1)) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering apps/show
+Rendered developers/_developer_bar (3.4ms)
+Completed in 36ms (View: 18, DB: 1) | 200 OK [http://localhost/apps/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SourcePreferencesController#index (for 127.0.0.1 at 2009-09-22 05:47:26) [GET]
+  Parameters: {"app_id"=>"2"}
+  [4;35;1mDeveloper Load (0.4ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+  [4;36;1mApp Load (0.3ms)[0m   [0;1mSELECT `apps`.* FROM `apps` INNER JOIN `app_developers` ON `apps`.id = `app_developers`.app_id WHERE (`apps`.`id` = '2') AND ((`app_developers`.developer_id = 1)) LIMIT 1[0m
+  [4;35;1mSourcePreference Load (1.0ms)[0m   [0mSELECT `source_preferences`.* FROM `source_preferences` INNER JOIN `app_source_preferences` ON `source_preferences`.id = `app_source_preferences`.source_preference_id WHERE ((`app_source_preferences`.app_id = 2)) [0m
+  [4;36;1mSource Load (0.3ms)[0m   [0;1mSELECT * FROM `sources` [0m
+Rendering template within layouts/application
+Rendering source_preferences/index
+Rendered developers/_developer_bar (3.8ms)
+Completed in 51ms (View: 28, DB: 2) | 200 OK [http://localhost/source_preferences?app_id=2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AppsController#show (for 127.0.0.1 at 2009-09-22 05:47:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDeveloper Load (0.5ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+  [4;36;1mApp Load (0.6ms)[0m   [0;1mSELECT `apps`.* FROM `apps` INNER JOIN `app_developers` ON `apps`.id = `app_developers`.app_id WHERE (`apps`.`id` = '2') AND ((`app_developers`.developer_id = 1)) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering apps/show
+Rendered developers/_developer_bar (3.3ms)
+Completed in 39ms (View: 17, DB: 2) | 200 OK [http://localhost/apps/2]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AppsController#edit (for 127.0.0.1 at 2009-09-22 05:47:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDeveloper Load (0.5ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+  [4;36;1mApp Load (0.3ms)[0m   [0;1mSELECT `apps`.* FROM `apps` INNER JOIN `app_developers` ON `apps`.id = `app_developers`.app_id WHERE (`apps`.`id` = '2') AND ((`app_developers`.developer_id = 1)) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering apps/edit
+Rendered developers/_developer_bar (3.1ms)
+Completed in 46ms (View: 25, DB: 1) | 200 OK [http://localhost/apps/2/edit]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AppsController#show (for 127.0.0.1 at 2009-09-22 05:47:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDeveloper Load (0.4ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+  [4;36;1mApp Load (0.3ms)[0m   [0;1mSELECT `apps`.* FROM `apps` INNER JOIN `app_developers` ON `apps`.id = `app_developers`.app_id WHERE (`apps`.`id` = '2') AND ((`app_developers`.developer_id = 1)) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering apps/show
+Rendered developers/_developer_bar (3.5ms)
+Completed in 40ms (View: 19, DB: 1) | 200 OK [http://localhost/apps/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-09-22 05:47:39) [GET]
+  [4;35;1mDeveloper Load (0.4ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/login
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-22 05:47:39) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered developers/_developer_bar (2.9ms)
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-22 05:50:05) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered developers/_developer_bar (5.4ms)
+Completed in 44ms (View: 32, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-22 05:50:17) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered developers/_developer_bar (2.0ms)
+Completed in 28ms (View: 17, DB: 2) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DevelopersController#new (for 127.0.0.1 at 2009-09-22 05:50:19) [GET]
+Rendering template within layouts/application
+Rendering developers/new
+Rendered developers/_developer_bar (2.6ms)
+Completed in 64ms (View: 42, DB: 1) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-22 05:50:21) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered developers/_developer_bar (2.1ms)
+Completed in 30ms (View: 17, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-22 05:53:46) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered developers/_developer_bar (5.9ms)
+Completed in 326ms (View: 158, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-09-22 05:53:56) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"O9VDGpuIvsXNtFABV3UdFGv+KmPkwbnH8lrO5W6Vs1g=", "login"=>"jrath", "password"=>"anything"}
+  [4;36;1mDeveloper Load (0.4ms)[0m   [0;1mSELECT * FROM `developers` WHERE (login = 'jrath' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mDeveloper Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `developers`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/apps
+Completed in 55ms (DB: 6) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AppsController#index (for 127.0.0.1 at 2009-09-22 05:53:56) [GET]
+  [4;36;1mDeveloper Load (0.5ms)[0m   [0;1mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering apps/index
+  [4;35;1mApp Load (1.2ms)[0m   [0mSELECT `apps`.* FROM `apps` INNER JOIN `app_developers` ON `apps`.id = `app_developers`.app_id WHERE ((`app_developers`.developer_id = 1)) [0m
+  [4;36;1mApp Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `apps`[0m
+Rendered developers/_developer_bar (3.7ms)
+Completed in 82ms (View: 60, DB: 4) | 200 OK [http://localhost/apps]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-22 05:53:59) [GET]
+  [4;35;1mDeveloper Load (0.4ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered developers/_developer_bar (3.4ms)
+Completed in 37ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-22 05:54:55) [GET]
+  [4;36;1mDeveloper Load (0.4ms)[0m   [0;1mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/apps
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AppsController#index (for 127.0.0.1 at 2009-09-22 05:54:55) [GET]
+  [4;35;1mDeveloper Load (0.4ms)[0m   [0mSELECT * FROM `developers` WHERE (`developers`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering apps/index
+  [4;36;1mApp Load (0.4ms)[0m   [0;1mSELECT `apps`.* FROM `apps` INNER JOIN `app_developers` ON `apps`.id = `app_developers`.app_id WHERE ((`app_developers`.developer_id = 1)) [0m
+Rendered developers/_developer_bar (3.7ms)
+Completed in 31ms (View: 15, DB: 7) | 200 OK [http://localhost/apps]
