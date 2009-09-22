@@ -1,0 +1,16 @@
+<h1> <%= link_to 'Apps List', apps_path %> >> <%= link_to h(@app.name), app_path(@app)%>  >> Edit</h1>
+
+<% form_for(@app) do |f| %>
+  <%= f.error_messages %>
+
+  <p> <b> Name: </b><br/> Max. 50, Min. 3 characters <br/><%= f.text_field 'name' %></p>
+  <p> <b> Web site url: </b><br/>e.g. www.jurnalo.com <br/><%= f.text_field 'url' %></p>
+  <p> <b> Description: </b><br/> Max. 5000 characters <br/><%= f.text_area 'description',{:rows => '10'} %></p>
+
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+

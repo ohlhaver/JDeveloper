@@ -1,0 +1,20 @@
+<h1> <%= link_to 'Apps List', apps_path %> >> <%= link_to h(@app.name), app_path(@app)%>  >> Source preferences</h1>
+<p>
+<table>
+  <tr>
+    <th align="left">Source</th>
+    <th align="left">Preference</th>
+    <th align="left">Actions</th>
+  </tr>
+<% p_o_f_s = preference_options_for_select %>
+<% @sources.each do |source| %>
+  <tr>
+    <% form_tag update_or_create_source_preference_path(:app_id => @app.id, :id => source.id) do %>
+    <td><%= source.name %></td>
+    <td><select name="preference"><%= options_for_select p_o_f_s, find_preference(source.id)%></select></td>
+    <td><%= submit_tag 'Update' %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+</p>

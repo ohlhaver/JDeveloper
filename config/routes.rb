@@ -1,4 +1,20 @@
 ActionController::Routing::Routes.draw do |map|
+
+
+
+  map.connect '', :controller => 'sessions', :action => 'new'
+  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+  map.login '/login', :controller => 'sessions', :action => 'new'
+  map.register '/register', :controller => 'developers', :action => 'create'
+  map.signup '/signup', :controller => 'developers', :action => 'new'
+  map.resources :developers, :collection => {:home => :get}
+  map.resources :apps, :member => {:reset_secret_key => :get, :activate => :get, :deactivate => :get} do |app|
+    app.resources :source_preferences
+  end
+  map.resources :source_preferences, :member => {:update_or_create => :post}
+
+  map.resource :session
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

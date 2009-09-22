@@ -1,0 +1,17 @@
+<h1> Apps List</h1>
+
+<table >
+  <tr>
+    <th align="left">Name</th>
+  </tr>
+
+<% @apps.each do |app| %>
+  <tr>
+    <td><%= link_to h(app.name), app_path(app) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New app', new_app_path %>

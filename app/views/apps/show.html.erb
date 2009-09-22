@@ -1,0 +1,11 @@
+<h1> <%= link_to 'Apps List', apps_path %> >> <%=h(@app.name)%> </h1>
+<%= link_to 'Edit', edit_app_path(@app) %> |
+<%= link_to 'Source preferences', source_preferences_path(:app_id => @app.id) %>
+<p> <b> Name: </b><br/><%= h @app.name %></p>
+<p> <b> App ID: </b><br/><%= h @app.id %></p>
+<p> <b> Secret key: </b><br/><%= h @app.secret_key %> ( <%= link_to 'Reset', reset_secret_key_app_path(@app) %> )</p>
+<p> <b> Active?: </b><br/><%= @app.is_active ? 'Yes' : 'No' %> ( <% if @app.is_active %><%= link_to 'De-activate!', deactivate_app_path(@app) %><% else %><%= link_to 'Activate!', activate_app_path(@app) %><% end %> )</p>
+<p> <b> Website url: </b><br/><%= h @app.url %></p>
+<p> <b> Description: </b><br/><%= h @app.description %></p>
+
+
