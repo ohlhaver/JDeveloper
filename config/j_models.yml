@@ -1,0 +1,4 @@
+development:
+  path: /home/jrath/Work/NewJurnalo/JModels 
+production:
+  path: /home/jurnalo/apps/JModels/current
